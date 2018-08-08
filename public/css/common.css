@@ -1,0 +1,28 @@
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+
+.color-black{
+ color: black;
+ font-size:0.9rem;
+ font-weight: 450
+}
+.text-size-change{
+    font-size: 0.7rem;
+}
+.show-block{
+    display: none;
+}
+@media (max-width: 992px){
+    .vertical-display{
+        flex-direction: column!important; 
+      }
+    .show-block{
+        display: block;
+    }
+} 
+
+.list-group>.list-group-item{
+    cursor: pointer;
+}
+

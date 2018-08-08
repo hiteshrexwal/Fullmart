@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <strong class="text-white">FullMart</strong> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="ml-auto">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        {{#if userExist}}
+                        <a class="nav-link dropdown-toggle text-white ml-2" href="#" id="user" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{loginUser}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="user">
+                            {{#each dropdown}}
+                            <a class="dropdown-item" href="{{link}}">{{text}}</a>
+                            {{/each}}
+                        </div>
+                        {{else}}
+                        <a class="nav-link text-white" href={{loginhref}} id="user">{{loginUser}}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        {{/if}}
+                    <li class="nav-item">
+                        <a class="nav-link text-white ml-3" href="/cart">
+                            <i class="fas fa-shopping-cart"></i>Cart</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</nav>

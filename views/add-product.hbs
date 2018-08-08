@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{> addScripts}}
+    <title>Document</title>
+</head>
+
+<body>
+    {{> navbar}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="display-4" style="color: coral;">Add Product</div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <form id="productform" >
+                    <div class="form-group" >
+                        <label for="name">Name of Product</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name of Product">
+                        <div class="invalid-feedback">
+                            Enter the product name!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" id="price" placeholder="Price ">
+                        <div class="invalid-feedback" id="price-valid">
+                            Enter the price!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Upload Image</label>
+                        <input type="file" class="form-control-file" id="img">
+                        <div class="invalid-feedback" id="imageFeedback">
+                            Image not Selected!
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Select the Category!
+                        </div>
+                    </div>
+                    <input type="button" class="btn btn-danger" value="Save" onclick="saveProduct()">
+                </form>
+                <!-- <input type="button" class="btn btn-danger" onclick="saveProduct">Save</input> -->
+            </div>
+            <div class="col-6" id="card">
+                <div class="card" style="width: 18rem;">
+                    <div id="imageDetail">
+                        <img class="card-img-top" src="" alt="Product image">
+                    </div>
+
+                    <div class="card-body">
+                        <h2 id="nameDetail">Header</h2>
+                        <p class="card-text" id="priceDetail">Some </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
